@@ -26,7 +26,7 @@ public class PessoaJuridicaDAO {
             PreparedStatement preparedStatement = conectorBD.getPrepared(sql);
             preparedStatement.setInt(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();
-            if(resultSet.first()) {
+            if(resultSet.next()) {
                 pessoaJuridica = converterPessoa(resultSet);
             }
             conectorBD.close(preparedStatement);
