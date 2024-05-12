@@ -5,10 +5,9 @@ import cadastro.model.util.SequenceManager;
 import cadastrodb.model.PessoaFisica;
 import cadastrodb.model.PessoaJuridica;
 
-import java.sql.SQLException;
 import java.util.List;
 
-public class CadastroBDTeste {
+public class CadastroDBTeste {
     public static void main(String[] args) {
         ConectorBD conectorBD = new ConectorBD();
         SequenceManager sequenceManager = new SequenceManager(conectorBD);
@@ -50,3 +49,4 @@ public class CadastroBDTeste {
         conectorBD.close(conectorBD.getConnection());
     }
 }
+
